@@ -1,0 +1,43 @@
+package com.Personage;
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+public class Mario extends Personnage {
+
+	
+	//*****VARIABLE*****/
+	private Image imgMario;
+	private ImageIcon icoMario;
+	
+	private Boolean saut; //vrai si mario saut
+	private int compteurSaut; // durée du saut et hauteur
+	
+	public Mario(int x, int y) {
+		super(x, y, 28, 50);
+
+	this.icoMario = new ImageIcon(getClass().getResource("/image/marioMarcheDroite.png"));
+	this.imgMario = this.icoMario.getImage();
+	
+	this.saut = false;
+	this.compteurSaut = 0;
+	}
+	
+	
+	
+	
+	// ****** GETTERS ****** //
+	
+	public Image getImgMario() {
+		return imgMario;
+	}
+	
+	
+	public Boolean getSaut() {return saut;}
+
+	//****** SETTERS *****//
+	public void setSaut(Boolean saut) {this.saut = saut;} 
+	
+	// ***** METHODE *****//
+}
